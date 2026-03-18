@@ -33,7 +33,7 @@ Bundle-ClassPath: com.microsoft.tfs.core.jar,
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: com.microsoft.tfs.core.httpclient;visibility:=reexport,
  com.microsoft.tfs.core.ws;visibility:=reexport,
  com.microsoft.tfs.core.ws.runtime;visibility:=reexport,

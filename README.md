@@ -34,8 +34,8 @@ Download the TEE-CLC-*.zip file in the [Releases](https://github.com/Microsoft/t
 
 ## Building with Ant
 ### Install Java 6
-1. We use JavaSE-1.6 as the minimal supported Java execution environment.
-1. Download and install the JDK for [JavaSE-1.6](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html).
+1. We use JavaSE-11 as the minimal supported Java execution environment.
+1. Download and install the JDK for [JavaSE-11](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html).
 1. Set the JAVA_HOME environment variable to point to the install, e.g.
  * (Windows) `SET JAVA_HOME=C:\dev\java\jdk1.6.0_45`
  * (Linux) `JAVA_HOME=~/dev/java/jdk1.6.0_45`

@@ -7,7 +7,7 @@ Bundle-Activator: com.microsoft.tfs.client.common.TFSCommonClientPlugin
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ClassPath: com.microsoft.tfs.client.common.jar,
  libs/com.jcraft.jsch_0.1.44.v201101211721.jar
 Require-Bundle: com.microsoft.tfs.core;visibility:=reexport,

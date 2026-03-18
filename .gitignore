@@ -8,3 +8,6 @@ bin-test
 
 # Maven builds
 target
+
+# Ai
+.spec-workflow

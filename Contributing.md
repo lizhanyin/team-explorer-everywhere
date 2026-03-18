@@ -14,7 +14,7 @@ Interested in contributing to the team-explorer-everywhere project? There are pl
 Install Eclipse Mars.2 Release (4.5.2) for RCP and RAP Developers or later.
 
 ### Java Requirements
-We use JavaSE-1.6 as the minimal supported Java execution environment. 
+We use JavaSE-11 as the minimal supported Java execution environment. 
 Depending on the Eclipse version you use you might have to install a later JDK version.
 
 For Eclipse Mars install JDK 8 or later. You can find the JDK downloads on Oracle's web site at 
@@ -32,7 +32,7 @@ In a new empty Eclipse workspace open the Preferences dialog using Window -> Pre
     - Click the `Finish` button.
     - Select the check-box at the added JDK and click the `Apply` button.
   * Go to the `Java` -> `Installed JREs` -> `Execution Environment` page.
-    - Select `JavaSE-1.6` in the `Execution Environments` column.
+    - Select `JavaSE-11` in the `Execution Environments` column.
     - Select the check-box at the desired compatible JDK in the Compatible JREs column.
 
 1. Set Compiler preferences

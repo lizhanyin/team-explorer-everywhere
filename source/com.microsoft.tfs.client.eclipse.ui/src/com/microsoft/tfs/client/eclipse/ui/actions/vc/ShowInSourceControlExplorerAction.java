@@ -21,7 +21,6 @@ import com.microsoft.tfs.client.eclipse.resource.PluginResourceFilters;
 import com.microsoft.tfs.client.eclipse.ui.actions.ActionHelpers;
 import com.microsoft.tfs.core.clients.versioncontrol.WorkspaceLocation;
 import com.microsoft.tfs.core.clients.versioncontrol.soapextensions.PathTranslation;
-import com.microsoft.tfs.core.clients.versioncontrol.soapextensions.Workspace;
 
 public class ShowInSourceControlExplorerAction extends ExtendedAction {
 

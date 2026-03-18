@@ -6,7 +6,7 @@ Bundle-Version: 14.139.0.qualifier
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ClassPath: com.microsoft.tfs.checkinpolicies.checkforcomments.jar
 Require-Bundle: com.microsoft.tfs.checkinpolicies
 Export-Package: com.microsoft.tfs.checkinpolicies.checkforcomments

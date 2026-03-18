@@ -7,7 +7,7 @@ Bundle-Activator: com.microsoft.tfs.client.common.ui.vcexplorer.TFSVersionContro
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: com.microsoft.tfs.client.common.ui,
  org.eclipse.ui
 Export-Package: com.microsoft.tfs.client.common.ui.vcexplorer,

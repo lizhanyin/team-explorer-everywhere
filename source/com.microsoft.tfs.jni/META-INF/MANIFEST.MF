@@ -5,7 +5,7 @@ Bundle-SymbolicName: com.microsoft.tfs.jni;singleton:=true
 Bundle-Version: 14.139.0.qualifier
 Bundle-Vendor: %Bundle-Vendor
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ClassPath: com.microsoft.tfs.jni.jar
 Require-Bundle: com.microsoft.tfs.logging,
  com.microsoft.tfs.util

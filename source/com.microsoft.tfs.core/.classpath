@@ -13,7 +13,7 @@
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"/>
 	<classpathentry kind="lib" path="libs/AlmHttpClient-15.105.0.20161011/alm-distributedtask-client-15.105.0-SNAPSHOT.jar" exported="true"/>
 	<classpathentry kind="lib" path="libs/AlmHttpClient-15.105.0.20161011/alm-extensionmanagement-client-15.105.0-SNAPSHOT.jar" exported="true"/>
 	<classpathentry kind="lib" path="libs/AlmHttpClient-15.105.0.20161011/alm-gallery-client-15.105.0-SNAPSHOT.jar" exported="true"/>

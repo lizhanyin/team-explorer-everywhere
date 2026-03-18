@@ -6,7 +6,7 @@ Bundle-Version: 14.139.0.qualifier
 Bundle-Vendor: %Bundle-Vendor
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ClassPath: com.microsoft.tfs.logging.jar,
  lib/commons-logging-1.2/commons-logging-1.2.jar,
  lib/log4j-2.3.2/log4j-api-2.3.2.jar,
