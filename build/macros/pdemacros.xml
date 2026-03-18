@@ -29,12 +29,31 @@
 			</condition>
 			<property name="string.antrunner-exec.verbose" value="-Dignore-this-verbose-placeholder-value=true" />
 
-			<!-- 
+			<!--
+				Build the path to the Java executable if a custom JDK is specified.
+			-->
+			<condition property="path.java.executable" value="${dir.machine.jdk}/bin/java.exe">
+				<and>
+					<isset property="dir.machine.jdk" />
+					<os family="windows" />
+				</and>
+			</condition>
+			<condition property="path.java.executable" value="${dir.machine.jdk}/bin/java">
+				<and>
+					<isset property="dir.machine.jdk" />
+					<not>
+						<os family="windows" />
+					</not>
+				</and>
+			</condition>
+
+			<!--
 				This directory (modules/updatesite) contains the build-time configuration files
-				that PDE needs to build the feature.  
+				that PDE needs to build the feature.
 			-->
 			<java classname="org.eclipse.core.launcher.Main"
 			      fork="true"
+			      jvm="${path.java.executable}"
 			      maxmemory="${value.eclipse-ant-runner.maxmemory}"
 			      failonerror="true">
 				<classpath>
