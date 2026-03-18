@@ -242,16 +242,35 @@ public class CrossCollectionRepositorySelectControl extends BaseControl {
 
         // Since EGit 4.1 default repository root directory preference is hosted
         // in the Core plugin.
-        RepositoryUtil repoUtil;
+        RepositoryUtil repoUtil = null;
+
+        // Try getInstance() first (EGit 4.x+)
         try {
-            repoUtil = org.eclipse.egit.core.Activator.getDefault().getRepositoryUtil();
-        } catch (final NoSuchMethodError error) {
-            try { // RepositoryUtil changed to singleton class and later an enum
-                java.lang.reflect.Field ref = RepositoryUtil.class.getField("INSTANCE"); //$NON-NLS-1$
-                if (java.lang.reflect.Modifier.isPrivate(ref.getModifiers())) ref.setAccessible(true);
-                repoUtil = (RepositoryUtil) ref.get(null);
-            } catch (final Exception exception) {
-                throw new RuntimeException(exception);
+            final java.lang.reflect.Method method = RepositoryUtil.class.getMethod("getInstance", (Class[]) null); //$NON-NLS-1$
+            repoUtil = (RepositoryUtil) method.invoke(null, (Object[]) null);
+        } catch (final Exception e) {
+            // Ignore, try next method
+        }
+
+        // Try INSTANCE enum field (EGit 5.x+)
+        if (repoUtil == null) {
+            try {
+                final java.lang.reflect.Field field = RepositoryUtil.class.getField("INSTANCE"); //$NON-NLS-1$
+                repoUtil = (RepositoryUtil) field.get(null);
+            } catch (final Exception e) {
+                // Ignore, try next method
+            }
+        }
+
+        // Try old Activator.getDefault().getRepositoryUtil() (EGit 3.x)
+        if (repoUtil == null) {
+            try {
+                final Object activator = Class.forName("org.eclipse.egit.core.Activator").getMethod("getDefault", (Class[]) null).invoke(null); //$NON-NLS-1$ //$NON-NLS-2$
+                if (activator != null) {
+                    repoUtil = (RepositoryUtil) activator.getClass().getMethod("getRepositoryUtil", (Class[]) null).invoke(activator); //$NON-NLS-1$
+                }
+            } catch (final Exception e) {
+                throw new RuntimeException("Cannot obtain RepositoryUtil instance", e); //$NON-NLS-1$
             }
         }
         final IEclipsePreferences corePrefs = repoUtil.getPreferences();
